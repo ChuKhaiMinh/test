@@ -12,7 +12,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: url(../img/note\ background.png);
+  background: url(note\ background.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
