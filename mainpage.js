@@ -55,7 +55,7 @@ const createButton = document.querySelector("#create_button");
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
-    return (window.location.replace = "../html/signin.html");
+    return (window.location.replace = "signin.html");
   }
   const uid = user.uid;
   //show infor
@@ -63,7 +63,7 @@ onAuthStateChanged(auth, async (user) => {
     const fieldAll = (await getDoc(doc(getFirestore(), "users", uid))).data();
     userName.textContent = fieldAll.disname;
     if (!fieldAll.avatarUrl) {
-      userAvatar.src = "../src/img/avatar.png";
+      userAvatar.src = "avatar.png";
     } else {
       userAvatar.src = fieldAll.avatarUrl;
     }
@@ -72,10 +72,10 @@ onAuthStateChanged(auth, async (user) => {
   }
   //mở các trang khác
   avatarManager.addEventListener("click", function (event) {
-    window.location.href = "../html/accountmanager.html";
+    window.location.href = "accountmanager.html";
   });
   chatBox.addEventListener("click", function (event) {
-    window.location.href = "../html/messagebox.html";
+    window.location.href = "messagebox.html";
   });
   hotNews.addEventListener("click", function (event) {
     event.preventDefault();
@@ -113,7 +113,7 @@ onAuthStateChanged(auth, async (user) => {
       });
       alert("Đăng bài thành công !");
       createContainer.style.display = "none";
-      window.location.href = "../html/mainpage.html";
+      window.location.href = "mainpage.html";
     } catch (error) {
       console.log(error.message);
     }
