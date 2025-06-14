@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting</title>
+    <link rel="stylesheet" href="../src/css/accountmanager.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="setting">
+        <section class="container_1">
+          <div class="avatar_change">
+            <img src="../src/img/avatar.png" alt="avatar" id="avatar" />
+            <span id="avatar_disname">Tên</span>
+          </div>
+          <div class="avatar_button">
+            <button type="submit" id="about_user">Tiểu sử</button>
+            <button type="submit" id="avatar_button">Đổi ảnh giao diện</button>
+          </div>
+        </section>
+        <section class="container_2">
+          <div class="information">
+            <p>Thông tin cá nhân</p>
+            <div class="infor_change">
+              <div class="show_infor">
+                <span>Tên người dùng :</span><br />
+                <span id="disname">Tên</span>
+              </div>
+              <div class="infor_button">
+                <button id="username_button">Đổi tên</button>
+              </div>
+            </div>
+            <div class="infor_change">
+              <div class="show_infor">
+                <span>Mật khẩu :</span><br />
+                <input
+                  id="password"
+                  type="password"
+                  readonly
+                  value="mật khẩu"
+                />
+                <!-- <span>Đây là mật khẩu</span> -->
+                <i class="fa-solid fa-eye" id="passwordEye"></i>
+              </div>
+              <div class="infor_button">
+                <button id="password_button">Đổi mật khẩu</button>
+              </div>
+            </div>
+            <div class="other_stuff">
+              <div class="delete">
+                <button id="delete_button">Xóa tài khoản</button>
+              </div>
+              <div class="logout">
+                <button id="logout_button">Đăng xuất</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="delete_container">
+      <form id="delete_content">
+        <div class="delete">
+          <div>
+            <p>Bạn chắc chắn muốn xóa tài khoản không?</p>
+            <input
+              type="password"
+              id="reauth_password"
+              placeholder="Nhập lại mật khẩu"
+              required
+              style="
+                width: 100%;
+                padding: 0.5rem;
+                margin: 1rem 0;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+          <div class="delete_stuff">
+            <div><button type="button" id="delete_sure">Xóa</button></div>
+            <div><button type="button" id="delete_cancel">Hủy</button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="changedisname_container">
+      <form id="changedisname">
+        <input
+          type="text"
+          placeholder="Nhập tên mới"
+          id="changedisname_input"
+        />
+        <button type="submit" id="changedisname_button">Gửi</button>
+        <i class="fa-solid fa-x" id="changedisname_close"></i>
+      </form>
+    </div>
+    <div class="changepassword_container">
+      <form id="changepassword">
+        <input
+          type="password"
+          id="changepassword_oldinput"
+          placeholder="Nhập mật khẩu cũ"
+          minlength="8"
+          maxlength="20"
+        />
+        <input
+          type="password"
+          placeholder="Nhập mật khẩu mới"
+          id="changepassword_newinput"
+          minlength="8"
+          maxlength="20"
+        />
+        <button type="submit" id="changepassword_button">Gửi</button>
+        <i class="fa-solid fa-x" id="changepassword_close"></i>
+      </form>
+    </div>
+    <div class="avatar_container">
+      <input type="file" id="avatar_file" accept="image/*" />
+      <button type="submit" id="avatar_upload">Gửi</button>
+      <button type="submit" id="avatar_delete">Xóa</button>
+      <i class="fa-solid fa-x" id="avatar_close"></i>
+    </div>
+    <div class="create_container">
+      <form id="create_content">
+        <div class="create">
+          <div class="create_content">
+            <textarea
+              placeholder="Hãy viết tiểu sử về bạn !"
+              id="create_input"
+            ></textarea>
+            <!-- cho biến count hiển thị số chữ đã viết -->
+          </div>
+          <div class="create_button">
+            <button type="submit" id="create_button">Gửi</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="../src/js/config.js"></script>
+    <script type="module" src="../src/js/accountmanager.js"></script>
+  </body>
+</html>

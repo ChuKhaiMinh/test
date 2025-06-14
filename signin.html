@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../src/css/signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div class="container-stuff">
+        <h1>Sign in</h1>
+        <form id="Signin">
+          <div class="username">
+            <input type="text" id="inputUser" placeholder="Username" required />
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              id="inputPassword"
+              placeholder="Password"
+              required
+              minlength="8"
+              maxlength="20"
+            />
+            <i class="fa-solid fa-eye" id="passwordEye"></i>
+          </div>
+          <div class="confirm">
+            <input
+              type="password"
+              id="inputConfirm"
+              placeholder="Confirm Password"
+              required
+              minlength="8"
+              maxlength="20"
+            />
+            <i class="fa-solid fa-eye" id="confirmEye"></i>
+          </div>
+          <div class="gmail">
+            <input type="text" id="inputGmail" placeholder="Gmail" required />
+          </div>
+          <div class="button">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+          <p>Already got an account ? <a href="login.html">click here</a></p>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="../src/js/config.js"></script>
+    <script type="module" src="../src/js/signin.js"></script>
+  </body>
+</html>

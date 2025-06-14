@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Note</title>
+    <link rel="stylesheet" href="../src/css/mainpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-stuff container_1">
+        <div class="avatar_img">
+          <img src="../src/img/avatar.png" alt="avatar" id="user_avatar" />
+          <span id="user_name">Tên</span>
+        </div>
+        <div class="avatar_manager">
+          <button id="avatar_manager">
+            <i class="fa-solid fa-gear"></i>
+            <span>Cài đặt</span>
+          </button>
+        </div>
+        <div class="chat_box">
+          <button id="chat_box">
+            <i class="fa-solid fa-message"></i>
+            <span>Tin nhắn</span>
+          </button>
+        </div>
+        <div class="hot_news">
+          <button id="hot_news">
+            <i class="fa-solid fa-fire"></i>
+            <span>Tin nóng</span>
+          </button>
+        </div>
+        <div class="thought">
+          <button id="thought">
+            <i class="fa-solid fa-plus"></i>
+            <span>Gửi dòng suy nghĩ</span>
+          </button>
+        </div>
+      </div>
+      <div class="container-stuff container_2">
+        <section class="random_thought">
+          <div class="user_avatar">
+            <button id="random_profile">
+              <img
+                src="../src/img/avatar.png"
+                alt="user avatar"
+                id="random_avatar"
+              />
+            </button>
+            <p id="random_name">Biệt danh</p>
+          </div>
+          <div class="mind_note">
+            <span id="mind_note">Đây là dòng suy nghĩ</span>
+          </div>
+          <div class="thought_feeling">
+            <form id="thought_feeling">
+              <div class="reactions">
+                <div class="reaction">
+                  <button id="like" class="reaction_button" type="button">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </button>
+                  <input
+                    type="text"
+                    value="0"
+                    id="like_count"
+                    class="count"
+                    readonly
+                  />
+                </div>
+                <div class="reaction">
+                  <button id="dislike" class="reaction_button" type="button">
+                    <i class="fa-solid fa-thumbs-down"></i>
+                  </button>
+                  <input
+                    type="text"
+                    value="0  "
+                    id="dislike_count"
+                    class="count"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="reply">
+                <input
+                  type="text"
+                  id="reaction"
+                  placeholder="suy nghĩ của bạn về bài viết ?"
+                />
+                <button id="reaction_submit" type="submit">
+                  Gửi dòng suy nghĩ
+                </button>
+              </div>
+              <div class="next">
+                <button type="button" id="next_button">
+                  Next <i class="fa-solid fa-right-long"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="container-stuff container_3">
+        <div class="leaderboard" id="top_comment">
+          <p>Comment nhiều nhất trong tuần vừa qua !</p>
+          <div class="top_items">
+            <div class="top_item">
+              <span class="top_comment">Top 1</span>
+              <span id="comment_1">Đây là top 1</span>
+            </div>
+            <div class="top_item">
+              <span class="top_comment">Top 2</span>
+              <span id="comment_2">Đây là top 2</span>
+            </div>
+            <div class="top_item">
+              <span class="top_comment">Top 3</span>
+              <span id="comment_2">Đây là top 3</span>
+            </div>
+          </div>
+        </div>
+        <div class="leaderboard" id="top_like">
+          <p>Số lượt like nhiều nhất trong tuần vừa qua !</p>
+          <div class="top_items">
+            <div class="top_item">
+              <span class="top_like">Top 1</span>
+              <span id="like_1">Đây là top 1</span>
+            </div>
+            <div class="top_item">
+              <span class="top_like">Top 2</span>
+              <span id="like_2">Đây là top 2</span>
+            </div>
+            <div class="top_item">
+              <span class="top_like">Top 3</span>
+              <span id="like_3">Đây là top 3</span>
+            </div>
+          </div>
+        </div>
+        <div class="leaderboard" id="top_post">
+          <p>Số bài đăng nhiều nhất trong tuần vừa qua !</p>
+          <div class="top_items">
+            <div class="top_item">
+              <span class="top_post">Top 1</span>
+              <span id="post_1">Đây là top 1</span>
+            </div>
+            <div class="top_item">
+              <span class="top_post">Top 2</span>
+              <span id="post_2">Đây là top 2</span>
+            </div>
+            <div class="top_item">
+              <span class="top_post">Top 3</span>
+              <span id="post_3">Đây là top 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="news_container">
+      <div class="news">
+        <div class="news_content news_content1">
+          <button id="news_button1">
+            <span id="news_content1">Nội dung</span>
+          </button>
+        </div>
+        <div class="news_content news_content2">
+          <button id="news_button2">
+            <span id="news_content2">Nội dung</span>
+          </button>
+        </div>
+        <div class="news_content news_content3">
+          <button id="news_button3">
+            <span id="news_content3">Nội dung</span>
+          </button>
+        </div>
+        <div class="news_content news_content4">
+          <button id="news_button4">
+            <span id="news_content4">Nội dung</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="create_container">
+      <form id="create_content">
+        <div class="create">
+          <div class="create_content">
+            <textarea
+              placeholder="Hãy viết cảm xúc của bạn !"
+              id="create_input"
+              maxlength="200"
+            ></textarea>
+            <!-- cho biến count hiển thị số chữ đã viết -->
+          </div>
+          <span>Không quá 200 từ !</span>
+          <div class="create_button">
+            <button type="submit" id="create_button">Đăng bài</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="profile_container">
+      <div class="profile_infor">
+        <img src="../src/img/avatar.png" alt="avatar" id="profile_avatar" />
+        <span id="profile_name">Biệt danh</span>
+      </div>
+      <div class="profile_about">
+        <div class="profile_post">
+          <span id="profile_postcount">Số bài đăng : 0</span>
+        </div>
+        <div class="profile_like">
+          <span id="profile_likecount">Số like : 0</span>
+        </div>
+        <div class="profile_comment">
+          <span id="profile_commentcount">Số bình luận : 0</span>
+        </div>
+        <div class="about_user">
+          <span id="about_user">Không có tiểu sử</span>
+        </div>
+      </div>
+      <i class="fa-solid fa-x" id="profile_close"></i>
+    </div>
+    <!-- <script type="module" src="../src/js/admin.js"></script> -->
+    <!-- <script type="module" src="../src/js/test.js"></script> -->
+    <script type="module" src="../src/js/config.js"></script>
+    <script type="module" src="../src/js/mainpage.js"></script>
+    <script type="module" src="../src/js/fetch.js"></script>
+    <script type="module" src="../src/js/news.js"></script>
+  </body>
+</html>

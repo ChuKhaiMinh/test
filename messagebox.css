@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background: black;
+  color: white; */
+}
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.container-stuff {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.container_1 {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  justify-content: left;
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+img {
+  height: 70px;
+  width: 70px;
+  border: 50%;
+  object-fit: cover;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.container_1 span {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.avatar_img span {
+  font-size: 30px;
+}
+.avatar_img {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  margin: 20px;
+  border-radius: 8px;
+}
+.history_chat {
+  display: flex;
+  border: 2px solid black;
+  margin: 20px;
+  border-radius: 8px;
+  height: 500px;
+}
+.chat {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.chat_id {
+  margin: 5px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+  align-items: center;
+}
+.chat_img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.chat_user {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.chat_message {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  overflow: hidden;
+  height: 30px;
+}
+.chat_message span {
+  font-size: 18px;
+  font-style: bold;
+}
+.container_2 {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  justify-content: left;
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 0 40px;
+}
+.opponent_avatar {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  margin: 20px;
+  border-radius: 8px;
+}
+.opponent_avatar span {
+  font-size: 25px;
+}
+.chat_content {
+  position: relative;
+  direction: row;
+  display: block;
+  border: 2px solid black;
+  margin: 20px;
+  border-radius: 8px;
+  height: 500px;
+}
+.chat_content div {
+  margin: 20px 10px;
+  padding: 5px;
+  justify-content: center;
+}
+.content {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 400px;
+}
+.content div {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(226, 226, 226);
+}
+.my_message {
+  max-width: 70%;
+  text-align: right;
+  float: right;
+  clear: both;
+}
+.opponent_message {
+  text-align: left;
+  float: left;
+  clear: both;
+}
+.button_message {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.button_message button {
+  width: 98%;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  background-color: rgb(226, 226, 226);
+}
