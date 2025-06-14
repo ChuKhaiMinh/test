@@ -83,7 +83,7 @@ const UPLOAD_PRESET = "JSI-final"; // preset tạo ở bước 1
 //check đăng nhập tài khoản
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
-    return window.location.replace("../html/signin.html");
+    return window.location.replace("signin.html");
   }
   const uid = user.uid;
   //show infor
@@ -93,7 +93,7 @@ onAuthStateChanged(auth, async (user) => {
     avatarDisname.textContent = fieldAll.disname;
     showPassword.value = fieldAll.password;
     if (!fieldAll.avatarUrl) {
-      avatarImg.src = "../src/img/avatar.png";
+      avatarImg.src = "avatar.png";
     } else {
       avatarImg.src = fieldAll.avatarUrl;
     }
@@ -120,7 +120,7 @@ onAuthStateChanged(auth, async (user) => {
     });
     alert("Đổi ảnh đại diện thành công !");
     avatarContainer.style.display = "none";
-    window.location.href = "../html/accountmanager.html";
+    window.location.href = "accountmanager.html";
   });
   avatarUpload.addEventListener("click", async (event) => {
     event.preventDefault();
@@ -156,7 +156,7 @@ onAuthStateChanged(auth, async (user) => {
       });
       alert("Đổi ảnh đại diện thành công !");
       avatarContainer.style.display = "none";
-      window.location.href = "../html/accountmanager.html";
+      window.location.href = "accountmanager.html";
     } catch (error) {
       console.log(error.message);
     }
@@ -184,7 +184,7 @@ onAuthStateChanged(auth, async (user) => {
       });
       alert("Đăng tiểu sử thành công !");
       createContainer.style.display = "none";
-      window.location.href = "../html/accountmanager.html";
+      window.location.href = "accountmanager.html";
     } catch (error) {
       console.log(error.message);
     }
@@ -211,7 +211,7 @@ onAuthStateChanged(auth, async (user) => {
     });
     alert("Đổi tên thành công");
     changedisnameContainer.style.display = "none";
-    window.location.href = "../html/accountmanager.html";
+    window.location.href = "accountmanager.html";
   });
 
   //password
@@ -242,7 +242,7 @@ onAuthStateChanged(auth, async (user) => {
       await updatePassword(user, changepasswordNewinput.value);
       alert("Đổi mật khẩu thành công !");
       changepasswordContainer.style.display = "none";
-      window.location.href = "../html/accountmanager.html";
+      window.location.href = "accountmanager.html";
     } catch (error) {
       console.log(error.message);
     }
