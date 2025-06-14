@@ -11,7 +11,7 @@ const password = document.querySelector("#inputPassword");
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    return window.location.replace("../html/mainpage.html");
+    return window.location.replace("mainpage.html");
   }
 });
 
@@ -48,7 +48,7 @@ document.querySelector("#submit").addEventListener("click", async (event) => {
   try {
     await signInWithEmailAndPassword(auth, gmail.value, password.value);
     alert("Đăng nhập thành công !");
-    window.location.href = "../html/mainpage.html";
+    window.location.href = "mainpage.html";
   } catch (error) {
     alert(error.message);
   }
