@@ -29,7 +29,7 @@ const gmailCheck = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    return window.location.replace("../html/mainpage.html");
+    return window.location.replace("mainpage.html");
   }
 });
 document.querySelector("#submit").addEventListener("click", async (event) => {
@@ -83,7 +83,7 @@ document.querySelector("#submit").addEventListener("click", async (event) => {
       post_count: 0,
     });
     alert("Đăng kí thành công");
-    window.location.href = "../html/login.html";
+    window.location.href = "login.html";
   } catch (error) {
     alert(error.message);
   }
