@@ -137,7 +137,7 @@ async function pickRandomPostAndShow() {
 
     const userData = userDocSnap.data();
     const disname = userData.disname || "Tên";
-    const avatarUrl = userData.avatarUrl || "../src/img/avatar.png";
+    const avatarUrl = userData.avatarUrl || "avatar.png";
 
     // 2.2. Update UI
     randomAvatar.src = avatarUrl;
